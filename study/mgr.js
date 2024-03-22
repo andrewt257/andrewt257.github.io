@@ -154,9 +154,6 @@ define(['managerAPI'], function(Manager) {
         { type:'postCsv'},
         {inherit: 'lastpage'}
     ]);
-    API.addSettings('logger',{type:'csv', url:'csv.php'});
-    {
-        type:'postCsv',
-    }
+
     return API.script;
 });
