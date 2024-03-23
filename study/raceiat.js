@@ -1,6 +1,6 @@
 define(['pipAPI','https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/iat10.js'], function(APIConstructor, iatExtension){
-    var API = new APIConstructor();
-    var global = API.getGlobal();
+    let API = new APIConstructor();
+    let global = API.getGlobal();
 
     return iatExtension({
         category1 : {
@@ -40,9 +40,9 @@ define(['pipAPI','https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/iat10.
             stimulusCss : {color:'#31940F','font-size':'2.3em'}
         },
         attribute1 : {
-            name : 'Bad',
+            name : 'Bad words',
             title : {
-                media : {word : 'Bad'},
+                media : {word : 'Bad words'},
                 css : {color:'#0000FF','font-size':'1.8em'},
                 height : 4 //Used to position the "Or" in the combined block.
             },
@@ -60,9 +60,9 @@ define(['pipAPI','https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/iat10.
             stimulusCss : {color:'#0000FF','font-size':'2.3em'}
         },
         attribute2 : {
-            name : 'Good',
+            name : 'Good words',
             title : {
-                media : {word : 'Good'},
+                media : {word : 'Good words'},
                 css : {color:'#0000FF','font-size':'1.8em'},
                 height : 4 //Used to position the "Or" in the combined block.
             },
@@ -82,6 +82,6 @@ define(['pipAPI','https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/iat10.
         base_url : {//Where are your images at?
             image : global.baseURL
         },
-        isTouch : global.isTouch
+        isTouch : global.$isTouch
     });
 });
