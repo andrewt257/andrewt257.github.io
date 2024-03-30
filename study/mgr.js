@@ -1,10 +1,11 @@
-define(['managerAPI'], function(Manager) {
+define(['managerAPI', 'https://pipe.jspsych.org/api/data/'], function(Manager) {
     var API    = new Manager();
 
     API.setName('mgr');
     API.addSettings('skip',true);
     API.addSettings('skin','demo');
     API.addSettings('logger',{type:'csv', url:'csv.php'});
+    init_data_pipe(API, 'notreal', {file_type:'csv'});
 
     var raceSet = API.shuffle(['a','b'])[0];
     var blackLabels = [];
